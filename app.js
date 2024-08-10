@@ -30,7 +30,7 @@ function displayApps(data) {
         appCard.innerHTML = `
             <img src="${app.iconURL}" alt="${app.name} icon">
             <h2>${app.name}</h2>
-            <p>${app.developerName}</p>
+            <p><strong>Desarrollador:</strong>${app.developerName}</p>
             <p><strong>Versión:</strong> ${app.version}</p>
             <p><strong>Fecha:</strong> ${app.versionDate}</p>
             <p><strong>Descripción:</strong> ${app.localizedDescription}</p>
