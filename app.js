@@ -1,5 +1,5 @@
 // URL del archivo JSON en GitHub
-const jsonUrl = 'https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps_esign.json'; // Reemplaza con la URL correcta
+const jsonUrl = 'https://raw.githubusercontent.com/PRMerlos/pablalrepo-apps/main/apps.json'; // Reemplaza con la URL correcta
 
 // Función para obtener los datos del JSON
 async function fetchApps() {
