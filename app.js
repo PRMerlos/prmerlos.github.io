@@ -1,3 +1,4 @@
+// URL del archivo JSON en GitHub
 const jsonUrl = 'https://raw.githubusercontent.com/swaggyP36000/TrollStore-IPAs/main/apps_esign.json'; // Reemplaza con la URL correcta
 
 // Función para obtener los datos del JSON
@@ -27,14 +28,17 @@ function displayApps(data) {
         const appCard = document.createElement('div');
         appCard.className = 'app-card';
 
+        // Genera el enlace de descarga con el prefijo de AltStore
+        const altstoreDownloadURL = `altstore://install?url=${encodeURIComponent(app.downloadURL)}`;
+
         appCard.innerHTML = `
             <img src="${app.iconURL}" alt="${app.name} icon">
             <h2>${app.name}</h2>
-            <p><strong>Desarrollador:</strong>${app.developerName}</p>
+            <p>${app.developerName}</p>
             <p><strong>Versión:</strong> ${app.version}</p>
             <p><strong>Fecha:</strong> ${app.versionDate}</p>
             <p><strong>Descripción:</strong> ${app.localizedDescription}</p>
-            <a href="${app.downloadURL}" class="download-button">Descargar</a>
+            <a href="${altstoreDownloadURL}" class="download-button">Descargar</a>
         `;
 
         appList.appendChild(appCard);
